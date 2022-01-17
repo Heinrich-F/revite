@@ -41,10 +41,9 @@ function toCodePoint(rune: string) {
 }
 
 function parseEmoji(emoji: string) {
-    if (emoji.startsWith("custom:")) {
-        return `https://dl.insrt.uk/projects/revolt/emotes/${emoji.substring(
-            7,
-        )}`;
+    if (emoji.startsWith("from-url:")) {
+        const url = emoji.substring(9,)
+        return url;
     }
 
     const codepoint = toCodePoint(emoji);
